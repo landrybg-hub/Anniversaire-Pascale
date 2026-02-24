@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mes 60 ans ☀️</title>
+
+<style>
+
+body{
+margin:0;
+font-family: Arial, sans-serif;
+color:white;
+text-align:center;
+}
+
+/* Hintergrundbild */
+
+.background{
+
+position:fixed;
+width:100%;
+height:100%;
+
+background:url("photo.jpg") center/cover no-repeat;
+
+filter:brightness(0.7);
+
+z-index:-1;
+
+}
+
+/* Inhalt */
+
+.container{
+
+padding:30px 20px;
+max-width:600px;
+margin:auto;
+
+}
+
+/* Karte */
+
+.card{
+
+background:rgba(0,0,0,0.55);
+
+padding:30px;
+
+border-radius:20px;
+
+margin-top:40px;
+
+animation:fadeIn 2s;
+
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+h1{
+
+font-size:34px;
+margin-bottom:10px;
+
+}
+
+h2{
+
+font-weight:normal;
+
+}
+
+/* Sonne */
+
+.sun{
+
+font-size:50px;
+
+animation:spin 20s linear infinite;
+
+margin-top:20px;
+
+}
+
+@keyframes spin{
+
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+
+}
+
+/* Button */
+
+button{
+
+margin-top:20px;
+padding:14px 26px;
+font-size:18px;
+border-radius:12px;
+border:none;
+background:#ffb347;
+cursor:pointer;
+
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+/* Nachricht */
+
+#welcome{
+
+display:none;
+margin-top:20px;
+font-size:22px;
+
+}
+
+/* Wellen */
+
+.wave{
+
+position:fixed;
+bottom:0;
+width:100%;
+font-size:28px;
+animation:waveMove 6s infinite linear;
+
+}
+
+@keyframes waveMove{
+
+0%{transform:translateX(-100px)}
+50%{transform:translateX(100px)}
+100%{transform:translateX(-100px)}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+<div class="sun">☀️</div>
+
+<div class="card">
+
+<h1>Mes 60 ans</h1>
+
+<h2>Le 27 mars je fête mes 60 ans 🎂</h2>
+
+<p>
+
+Mais cette année, j'ai décidé de célébrer cet anniversaire un peu différemment 😊
+
+</p>
+
+<p>
+
+Je vous invite à venir fêter mes <b>60 ans</b> cet été chez moi à
+
+</p>
+
+<h2>Penmarch 🌊</h2>
+
+<h2>Le 1er août ☀️</h2>
+
+<p>
+
+Au programme : soleil, musique, bonne humeur  
+et surtout le plaisir d'être ensemble ❤️
+
+</p>
+
+<p>
+
+J'espère vous voir pour partager ce moment avec moi.
+
+</p>
+
+<button onclick="playMusic()">
+
+Je serai là 🎉
+
+</button>
+
+<div id="welcome">
+
+J'ai hâte de vous retrouver ❤️
+
+</div>
+
+</div>
+
+</div>
+
+<div class="wave">
+
+🌊 🌊 🌊 🌊 🌊 🌊 🌊 🌊
+
+</div>
+
+<audio id="music" src="summer.mp3"></audio>
+
+<script>
+
+function playMusic(){
+
+document.getElementById("welcome").style.display="block";
+
+document.getElementById("music").play().catch(()=>{});
+
+}
+
+</script>
+
+</body>
+
+</html>
